@@ -5,32 +5,82 @@
 
 # TODO: Check if the packages are installed, if so just update
 
+# return 1 if function not installed
+func_exist() {
+	if [[ $# -ne 1 ]]; then
+		echo "Error: only accept one argument"
+		return 1
+	fi
+
+	type ${1} >/dev/null 2>&1;
+	
+	if [[ $? -ne 0 ]]; then
+		return 1
+	fi
+
+	return 0
+}
+
 # This script helps you to install everything needed to build smart contract
 # This script is for MacOS ONLY.
 
+echo
+echo "Starting to check and install dependencies..."
+echo
+
 # Install homebrew
-$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+func_exist brew
+if [[ $? -ne 0 ]]; then
+	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
 
 # Install Node.js and NPM
-brew install node
+func_exist node
+if [[ $? -ne 0 ]]; then
+	brew install node
+fi
 
 # Install Git
-brew install git
+func_exist git
+if [[ $? -ne 0 ]]; then
+	brew install git
+fi
 
 # Install Go Binary
-brew install go
-# Export GOPATH 
-export PATH=${HOME}/go/bin:$PATH
+func_exist go
+if [[ $? -ne 0 ]]; then
+	brew install go
+	# Export GOPATH 
+	export PATH=${HOME}/go/bin:$PATH
+fi
 
 # Install geth
-brew update; brew install ethereum
+func_exist geth
+if [[ $? -ne 0 ]]; then
+	brew update; brew install ethereum
+fi
 
 # Install truffle (Solidity Compiler is 'solc' is also installed)
-npm install truffle
+func_exist truffle
+if [[ $? -ne 0 ]]; then
+	npm install truffle
+fi
 
 # Install ganache-cli (prev. TestRPC)
-npm install ganache-cli@beta
+func_exist ganache-cli
+if [[ $? -ne 0 ]]; then
+	npm install ganache-cli@beta
+fi
+
+echo
+echo "...All installation finished!"
+echo
 
 # Build alias
-sourse ./SetAlias.sh
+source SetAlias.sh
+if [[ $? -ne 0 ]]; then
+	echo "Somthing went wrong in setting alias, please check './SetAlias.sh' for path"
+	echo "Maybe you didn't install truffle and ganache-cli in local with npm."
+fi
+
 
