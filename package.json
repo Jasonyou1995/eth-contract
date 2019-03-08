@@ -1,0 +1,27 @@
+{
+  "name": "eth-contract",
+  "version": "1.0.0",
+  "description": "Develope Functional Ethereum Smart Contract",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jasonyou1995/eth-contract.git"
+  },
+  "keywords": [
+    "ETH",
+    "Solidity"
+  ],
+  "author": "Jason You",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jasonyou1995/eth-contract/issues"
+  },
+  "homepage": "https://github.com/Jasonyou1995/eth-contract#readme",
+  "dependencies": {
+    "ganache-cli": "^6.3.0-beta.0",
+    "truffle": "^5.0.7"
+  }
+}
