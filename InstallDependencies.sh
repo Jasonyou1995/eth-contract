@@ -32,5 +32,5 @@ npm install truffle
 npm install ganache-cli@beta
 
 # Build alias
-source ./RunMe.sh
+sourse ./SetAlias.sh
 
