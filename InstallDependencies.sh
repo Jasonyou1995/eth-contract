@@ -8,11 +8,11 @@
 # return 1 if function not installed
 func_exist() {
 	if [[ $# -ne 1 ]]; then
-		echo "Error: only accept one argument"
+		echo "[-] Error: only accept one argument"
 		return 1
 	fi
 
-	type ${1} >/dev/null 2>&1;
+	type "$1" >/dev/null 2>&1;
 	
 	if [[ $? -ne 0 ]]; then
 		return 1
@@ -25,8 +25,12 @@ func_exist() {
 # This script is for MacOS ONLY.
 
 echo
-echo "Starting to check and install dependencies..."
+echo "[+] Starting to check and install dependencies..."
 echo
+
+# Try to setup all proper aliases first
+chmod a+x ./SetAlias.sh
+source ./SetAlias.sh 2>&1
 
 # Install homebrew
 func_exist brew
@@ -67,20 +71,50 @@ if [[ $? -ne 0 ]]; then
 fi
 
 # Install ganache-cli (prev. TestRPC)
-func_exist ganache-cli
+func_exist ganache
 if [[ $? -ne 0 ]]; then
 	npm install ganache-cli@beta
 fi
 
 echo
-echo "...All installation finished!"
+echo "[+] ...All installation finished!"
 echo
 
+
+echo
+echo "[+] Starting the set asliaes..."
+echo
 # Build alias
 source SetAlias.sh
-if [[ $? -ne 0 ]]; then
-	echo "Somthing went wrong in setting alias, please check './SetAlias.sh' for path"
-	echo "Maybe you didn't install truffle and ganache-cli in local with npm."
-fi
+echo
+echo "[+] ...All denpendency setup finished!"
+echo
 
+
+echo
+echo 'Below are the dependencies we checked'
+echo
+echo '--------------------------------------'
+echo '|   Installed   |   Invoke Command    |'
+echo '--------------------------------------'
+echo '--------------------------------------'
+echo '|   Homebrew    |   $ brew            |'
+echo '--------------------------------------'
+echo '|   Node.js     |   $ node            |'
+echo '--------------------------------------'
+echo '|   NPM         |   $ npm             |'
+echo '--------------------------------------'
+echo '|   Git         |   $ git             |'
+echo '--------------------------------------'
+echo '|   Golang      |   $ go              |'
+echo '--------------------------------------'
+echo '|   Go-Ethereum |   $ geth            |'
+echo '--------------------------------------'
+echo '|   Truffle     |   $ truffle         |'
+echo '--------------------------------------'
+echo '|   Ganache-cli |   $ ganache         |'
+echo '--------------------------------------'
+echo '|   Solc-js     |   $ solcjs          |'
+echo '--------------------------------------'
+echo
 

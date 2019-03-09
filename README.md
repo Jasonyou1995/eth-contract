@@ -4,6 +4,13 @@
 
 <!--&nbsp; is for space, &ensp; might works?-->
 ## Tools and Environments
+
+### Installing tools
+
+* Before you start, please run the `./InstallDependencies.sh` script. You might need to run: `chmod a+x ./InstallDependencies.sh` first
+
+### Environments
+
 * Golang = go version go1.11.4 darwin/amd64
 * geth (go-ethereum) = 1.8.22-stable
 * npm &nbsp;= v6.9.0
@@ -12,26 +19,24 @@
 * Solidity = v0.5.0
 * Ganache-cli (prev. TestRPC) = v6.3.0-beta.0 (ganache-core: 2.4.0-beta.0)
 
-In this directory I made a bash script called `./InstallDependencies.sh` that helps you to install all the required dependencies.
-
 ### Version Check
 
-		$ geth version
-		Geth
-		Version: 1.8.22-stable
-		Architecture: amd64
-		Protocol Versions: [63 62]
-		Network Id: 1
-		Go Version: go1.11.5
-		...
+	$ geth version
+	Geth
+	Version: 1.8.22-stable
+	Architecture: amd64
+	Protocol Versions: [63 62]
+	Network Id: 1
+	Go Version: go1.11.5
+	...
 
-		$ truffle version
-		Truffle v5.0.7 (core: 5.0.7)
-		Solidity v0.5.0 (solc-js)
-		Node v11.10.1
+	$ truffle version
+	Truffle v5.0.7 (core: 5.0.7)
+	Solidity v0.5.0 (solc-js)
+	Node v11.10.1
 
-		$ ganache-cli --version
-		Ganache CLI v6.3.0-beta.0 (ganache-core: 2.4.0-beta.0)
+	$ ganache-cli --version
+	Ganache CLI v6.3.0-beta.0 (ganache-core: 2.4.0-beta.0)
 
 		
 ### Notes for dependencies:
