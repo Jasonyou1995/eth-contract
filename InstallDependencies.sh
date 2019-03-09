@@ -30,7 +30,7 @@ echo
 
 # Try to setup all proper aliases first
 chmod a+x ./SetAlias.sh
-source ./SetAlias.sh 2>&1
+source ./SetAlias.sh >/dev/null 2>&1
 
 # Install homebrew
 func_exist brew
@@ -76,8 +76,14 @@ if [[ $? -ne 0 ]]; then
 	npm install ganache-cli@beta
 fi
 
+# check the web3
+npm view web3 version >/dev/null 2>&1
+if [[ $? -ne 0 ]]; then
+	npm install web3
+fi
+
 echo
-echo "[+] ...All installation finished!"
+echo " ......All installation finished!"
 echo
 
 
@@ -87,7 +93,7 @@ echo
 # Build alias
 source SetAlias.sh
 echo
-echo "[+] ...All denpendency setup finished!"
+echo " ......All denpendency setup finished!"
 echo
 
 
@@ -95,7 +101,7 @@ echo
 echo 'Below are the dependencies we checked'
 echo
 echo '--------------------------------------'
-echo '|   Installed   |   Invoke Command    |'
+echo '|   INSTALLED   |  COMMAND TO INVOKE  |'
 echo '--------------------------------------'
 echo '--------------------------------------'
 echo '|   Homebrew    |   $ brew            |'
@@ -115,6 +121,8 @@ echo '--------------------------------------'
 echo '|   Ganache-cli |   $ ganache         |'
 echo '--------------------------------------'
 echo '|   Solc-js     |   $ solcjs          |'
+echo '--------------------------------------'
+echo '|   Web 3       | N/A (import in node)|'
 echo '--------------------------------------'
 echo
 

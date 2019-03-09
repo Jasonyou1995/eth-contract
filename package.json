@@ -22,6 +22,7 @@
   "homepage": "https://github.com/Jasonyou1995/eth-contract#readme",
   "dependencies": {
     "ganache-cli": "^6.3.0-beta.0",
-    "truffle": "^5.0.7"
+    "truffle": "^5.0.7",
+    "web3": "^1.0.0-beta.48"
   }
 }

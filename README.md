@@ -19,7 +19,6 @@
 * Truffle = v5.0.7
 * Solidity = v0.5.0
 * Ganache-cli (prev. TestRPC) = v6.3.0-beta.0 (ganache-core: 2.4.0-beta.0)
-* Web3 = 
 
 ### Version Check
 
