@@ -7,9 +7,10 @@
 
 ### Installing tools
 
-* Before you start, please run the `./InstallDependencies.sh` script. You might need to run: `chmod a+x ./InstallDependencies.sh` first
+* Before you start, please run the `./InstallDependencies.sh` script. 
+* You might need to run: `chmod a+x ./InstallDependencies.sh` first to make this script executable.
 
-### Environments
+### Environment and dependencies
 
 * Golang = go version go1.11.4 darwin/amd64
 * geth (go-ethereum) = 1.8.22-stable
@@ -18,6 +19,7 @@
 * Truffle = v5.0.7
 * Solidity = v0.5.0
 * Ganache-cli (prev. TestRPC) = v6.3.0-beta.0 (ganache-core: 2.4.0-beta.0)
+* Web3 = 
 
 ### Version Check
 
