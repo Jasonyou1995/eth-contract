@@ -1,4 +1,4 @@
-# Test 3: Upgradable Contract aka The Proxy Pattern
+# Upgradable Contract aka The Proxy Pattern
 
 ## Strategies
 
