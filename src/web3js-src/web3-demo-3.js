@@ -1,7 +1,7 @@
 // Author:      Jason You
 // Modified:    March 22 2019
 //
-// Taks 2.3:    Find gas usage for all functions in you contract.
+// Find gas usage for all functions in you contract.
 
 /**********************************************************/
 /************ Modules And My Helper Functions *************/

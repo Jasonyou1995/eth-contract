@@ -1,4 +1,9 @@
 #!/bin/bash
+#
+# Author: Jason You, All Rights Reserved
+#
+# Set alias for local dependencies
+
 
 # Expand aliases defined in the shell ~/.bashrc
 # This  command must be included, otherwise aslias won't works

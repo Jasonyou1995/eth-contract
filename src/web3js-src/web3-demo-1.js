@@ -1,7 +1,7 @@
 // Author:      Jason You
 // Modified:    March 22 2019
 //
-// Taks 2.1:    Print all tx made to this contract.
+// Print all tx made to this contract.
 //
 // Note:        All the solution source codes are stored in the ./helper.js script
 

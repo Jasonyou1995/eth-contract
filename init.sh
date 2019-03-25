@@ -1,9 +1,9 @@
 #!/bin/bash
+#
+# Author: Jason You, All Rights Reseved
+#
+# Make sure that all the required packages are installed/updated
 
-
-# Author: Jason You All Rights Reseved
-
-# TODO: Check if the packages are installed, if so just update
 
 # return 1 if function not installed
 func_exist() {

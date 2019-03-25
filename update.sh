@@ -1,4 +1,8 @@
 #!/bin/bash
+#
+# Author: Jason You, All Rights Reserved
+#
+# Update the tool sets
 
 
 brew update

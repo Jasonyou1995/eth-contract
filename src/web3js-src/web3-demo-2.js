@@ -1,7 +1,7 @@
 // Author:      Jason You
 // Modified:    March 22 2019
 //
-// Taks 2.2:    Find all instances of the deployed contract.
+// Find all instances of the deployed contract.
 
 /**********************************************************/
 /************ Modules And My Helper Functions *************/
