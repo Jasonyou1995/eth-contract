@@ -2,6 +2,15 @@
 
 ## Introduction
 
+This project demonstrates a fully functioning ERC223 token deployed on the Rinkeby test network. You can use Remix web compiler to compile and deploy, or you can setup your own local environment with **Truffle suit** to test the behavior of this smart contract.
+
+I listed all the environment dependencies in the next section, and you can easily install all of them with `./init.sh` in this directory.
+
+After that you can run `npm install` to start this project. More details about how to compile and migrate with truffle will be covered in the later sections
+
+**Note:** In the `./src` directory I implemented the upgradable version of this contract with proxy pattern, and several node.js scripts that interact with our deployed smart contract with web3.js.
+
+
 <!--&nbsp; is for space, &ensp; might works?-->
 ## Tools and Environments
 

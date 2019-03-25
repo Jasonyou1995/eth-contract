@@ -5,3 +5,7 @@ Note: you must have geth --rinkeby client running in your local machine to make 
 Here I used the host and port: http://localhost:8545
 
 We can easily build front-end with Node.js and Web3.js, and here is just giving you a taste about how things works.
+
+## How to run the codes
+
+`node <script-name>.js`
